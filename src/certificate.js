@@ -54,6 +54,14 @@ function setReleaseDateTime () {
 
   const releaseTimeInput = document.querySelector('#field-heuresortie')
   releaseTimeInput.value = `${hour}:${minute}`
+
+  const profile = getProfile()
+  for (const field of ['firstname', 'lastname', 'lieunaissance', 'zipcode', 'birthday', 'address', 'town']) {
+    const input = $('#field-' + field)
+    if (input && profile[field]) {
+      input.value = profile[field]
+    }
+  }
 }
 
 function saveProfile () {
@@ -89,11 +97,13 @@ function idealFontSize (font, text, maxWidth, minSize, defaultSize) {
 
 async function generatePdf (profile, reasons) {
   const creationDate = new Date().toLocaleDateString('fr-FR')
-  const creationHour = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h')
+  //const creationHour = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', 'h')
 
   const { lastname, firstname, birthday, lieunaissance, address, zipcode, town, datesortie, heuresortie } = profile
   const releaseHours = String(heuresortie).substring(0, 2)
   const releaseMinutes = String(heuresortie).substring(3, 5)
+
+  const creationHour = releaseHours + 'h' + releaseMinutes
 
   const data = [
     `Cree le: ${creationDate} a ${creationHour}`,
@@ -191,7 +201,9 @@ function downloadBlob (blob, fileName) {
   const link = document.createElement('a')
   var url = URL.createObjectURL(blob)
   link.href = url
-  link.download = fileName
+  if (fileName) {
+    link.download = fileName
+  }
   document.body.appendChild(link)
   link.click()
 }
@@ -233,25 +245,31 @@ $('#field-birthday').onkeyup = function () {
 
 const snackbar = $('#snackbar')
 
-$('#generate-btn').addEventListener('click', async event => {
-  event.preventDefault()
+for (const btn of $$('.btn-attestation')) {
+  btn.addEventListener('click', async event => {
+    event.preventDefault()
 
-  saveProfile()
-  const reasons = getAndSaveReasons()
-  const pdfBlob = await generatePdf(getProfile(), reasons)
-  localStorage.clear()
-  const creationDate = new Date().toLocaleDateString('fr-CA')
-  const creationHour = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', '-')
-  downloadBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`) 
+    saveProfile()
+    const reasons = getAndSaveReasons()
+    const pdfBlob = await generatePdf(getProfile(), reasons)
+    //localStorage.clear()
+    const creationDate = new Date().toLocaleDateString('fr-CA')
+    const creationHour = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', '-')
+    if (event.target.id == "generate-btn" || event.target.parentElement.id == "generate-btn") {
+      downloadBlob(pdfBlob, "") 
+    } else {
+      downloadBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`) 
+    }
 
-  snackbar.classList.remove('d-none')
-  setTimeout(() => snackbar.classList.add('show'), 100)
+    snackbar.classList.remove('d-none')
+    setTimeout(() => snackbar.classList.add('show'), 100)
 
-  setTimeout(function () {
-    snackbar.classList.remove('show')
-    setTimeout(() => snackbar.classList.add('d-none'), 500)
-  }, 6000)
-})
+    setTimeout(function () {
+     snackbar.classList.remove('show')
+      setTimeout(() => snackbar.classList.add('d-none'), 500)
+    }, 6000)
+  })
+}
 
 $$('input').forEach(input => {
   const exempleElt = input.parentNode.parentNode.querySelector('.exemple')

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="msapplication-TileColor" content="#603cba">
-    <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+    <meta name="msapplication-config" content="/deplacement-covid-19/browserconfig.a931cee7.xml">
     <meta name="theme-color" content="#ffffff">
     <meta name="title" content="Générateur d'attestation de déplacement dérogatoire - COVID-19">
     <meta name="description" content="Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle.">
@@ -12,22 +12,31 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="French">
-    <meta property="og:title" content="Générateur d'attestation de déplacement dérogatoire - COVID-19" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:description" content="Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle." />
-    <link rel="canonical" href="https://media.interieur.gouv.fr/deplacement-covid-19/" />
-    <meta property="og:url" content="https://media.interieur.gouv.fr/deplacement-covid-19/" />
-    <meta property="og:site_name" content="Générateur d'attestation de déplacement dérogatoire - COVID-19" />
-    <script type='application/ld+json'>{"@context":"http://www.schema.org","@type":"GovernmentOrganization","name":"Générateur d'attestation de déplacement dérogatoire - COVID-19","description":"Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle.","address":{"@type":"PostalAddress","addressCountry":"France"}}</script>
+    <meta property="og:title" content="Générateur d'attestation de déplacement dérogatoire - COVID-19">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:description" content="Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle.">
+    <link rel="canonical" href="https://media.interieur.gouv.fr/deplacement-covid-19/">
+    <meta property="og:url" content="https://media.interieur.gouv.fr/deplacement-covid-19/">
+    <meta property="og:site_name" content="Générateur d'attestation de déplacement dérogatoire - COVID-19">
+    <script type="application/ld+json">{
+  "@context": "http://www.schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "Générateur d'attestation de déplacement dérogatoire - COVID-19",
+  "description": "Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "France"
+  }
+}</script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-    <link rel="manifest" href="./favicons/site.webmanifest">
-    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#21bf73">
+    <link rel="apple-touch-icon" sizes="180x180" href="/deplacement-covid-19/apple-touch-icon.aaba99a7.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/deplacement-covid-19/favicon-32x32.bd6b9d71.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/deplacement-covid-19/favicon-16x16.a0a61c08.png">
+    <link rel="manifest" href="/deplacement-covid-19/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/deplacement-covid-19/safari-pinned-tab.a198a050.svg" color="#21bf73">
 
     <title>COVID-19 – Générateur d'attestation de déplacement dérogatoire</title>
-</head>
+<link rel="stylesheet" href="/deplacement-covid-19/certificate.bed43037.css"></head>
 <body>
     <header role="banner" class="wrapper">
         <div>
@@ -48,17 +57,7 @@
             <div class="form-group">
                 <label for="field-firstname" id="field-firstname-label">Prénom</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="field-firstname"
-                        name="firstname"
-                        autocomplete="given-name"
-                        placeholder="Jean"
-                        required
-                        autofocus
-                        aria-invalid="true"
-                    >
+                    <input type="text" class="form-control" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" required="" autofocus="" aria-invalid="true">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
@@ -67,17 +66,7 @@
             <div class="form-group">
                 <label for="field-lastname" id="field-lastname-label">Nom</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="field-lastname"
-                        name="lastname"
-                        autocomplete="family-name"
-                        placeholder="Dupont"
-                        aria-invalid="true"
-                        required
-                        autofocus
-                    >
+                    <input type="text" class="form-control" id="field-lastname" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-invalid="true" required="" autofocus="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
@@ -86,36 +75,16 @@
             <div class="form-group">
                 <label for="field-birthday" id="field-birthday-label">Date de naissance (au format jj/mm/aaaa)</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        pattern="^([0][1-9]|[1-2][0-9]|30|31)\/([0][1-9]|10|11|12)\/(19[0-9][0-9]|20[0-1][0-9]|2020)"
-                        inputmode="numeric"
-                        class="form-control"
-                        id="field-birthday"
-                        name="birthday"
-                        aria-invalid="true"
-                        autocomplete="bday"
-                        placeholder="01/01/1970"
-                        maxlength="10"
-                        required
-                    >
+                    <input type="text" pattern="^([0][1-9]|[1-2][0-9]|30|31)\/([0][1-9]|10|11|12)\/(19[0-9][0-9]|20[0-1][0-9]|2020)" inputmode="numeric" class="form-control" id="field-birthday" name="birthday" aria-invalid="true" autocomplete="bday" placeholder="01/01/1970" maxlength="10" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
             </div>
             
             <div class="form-group">
-                <label for="field-lieunaissance"  id="field-lieunaissance-label">Lieu de naissance</label>
+                <label for="field-lieunaissance" id="field-lieunaissance-label">Lieu de naissance</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="field-lieunaissance"
-                        name="lieunaissance"
-                        aria-invalid="true"
-                        placeholder="Lyon"
-                        required
-                    >
+                    <input type="text" class="form-control" id="field-lieunaissance" name="lieunaissance" aria-invalid="true" placeholder="Lyon" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
@@ -124,16 +93,7 @@
             <div class="form-group">
                 <label for="field-address" id="field-address-label">Adresse</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="field-address"
-                        name="address"
-                        aria-invalid="true"
-                        autocomplete="address-line1" 
-                        placeholder="999 avenue de france"
-                        required
-                    >
+                    <input type="text" class="form-control" id="field-address" name="address" aria-invalid="true" autocomplete="address-line1" placeholder="999 avenue de france" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
@@ -142,40 +102,16 @@
             <div class="form-group">
                 <label for="field-town" id="field-town-label">Ville</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="field-town"
-                        name="town"
-                        autocomplete="address-level1"
-                        aria-invalid="true"
-                        placeholder="Paris"
-                        required
-                    >
+                    <input type="text" class="form-control" id="field-town" name="town" autocomplete="address-level1" aria-invalid="true" placeholder="Paris" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
             </div>
             
             <div class="form-group">
-                <label for="field-zipcode" id="field-zipcode-label" >Code Postal</label>
+                <label for="field-zipcode" id="field-zipcode-label">Code Postal</label>
                 <div class="input-group  align-items-center">
-                    <input
-                        type="text"
-                        inputmode="numeric"
-                        pattern="[0-9]{5}"
-                        min="00000"
-                        max="99999"
-                        class="form-control"
-                        id="field-zipcode"
-                        name="zipcode"
-                        aria-invalid="true"
-                        autocomplete="postal-code" 
-                        minlength="4"
-                        maxlength="5"
-                        placeholder="75001"
-                        required
-                    >
+                    <input type="text" inputmode="numeric" pattern="[0-9]{5}" min="00000" max="99999" class="form-control" id="field-zipcode" name="zipcode" aria-invalid="true" autocomplete="postal-code" minlength="4" maxlength="5" placeholder="75001" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
                 <p class="exemple"></p>
@@ -222,7 +158,7 @@
             <div class="form-group">
                 <label for="field-datesortie">Date de sortie</label>
                 <div class="input-group  align-items-center">
-                    <input type="date" class="form-control" id="field-datesortie" name="datesortie" autocomplete="off" placeholder="JJ/MM/YYYY" aria-invalid="true" required>
+                    <input type="date" class="form-control" id="field-datesortie" name="datesortie" autocomplete="off" placeholder="JJ/MM/YYYY" aria-invalid="true" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
             </div>
@@ -230,15 +166,15 @@
             <div class="form-group">
                 <label for="field-heuresortie">Heure de sortie</label>
                 <div class="input-group  align-items-center">
-                    <input type="time" class="form-control" id="field-heuresortie" name="heure" autocomplete="off" aria-invalid="true" required>
+                    <input type="time" class="form-control" id="field-heuresortie" name="heure" autocomplete="off" aria-invalid="true" required="">
                     <span class="validity" aria-hidden="true"></span>
                 </div>
             </div>
             
             
             <p class="text-center mt-5">
-                <button type="button" id="generate-btn" class="btn btn-primary btn-attestation"><span ><i class="fa fa-file-pdf inline-block mr-1"></i>  Afficher mon attestation</span></button>
-                <button type="button" id="download-btn" class="btn btn-primary btn-attestation"><span ><i class="fa fa-file-pdf inline-block mr-1"></i>  Télécharger mon attestation</span></button>
+                <button type="button" id="generate-btn" class="btn btn-primary btn-attestation"><span><i class="fa fa-file-pdf inline-block mr-1"></i>  Afficher mon attestation</span></button>
+                <button type="button" id="download-btn" class="btn btn-primary btn-attestation"><span><i class="fa fa-file-pdf inline-block mr-1"></i>  Télécharger mon attestation</span></button>
             </p>
 
             <div class="bg-primary  d-none" id="snackbar">
@@ -265,6 +201,6 @@
         </p>
     </div>
 
-    <script src="./certificate.js"></script>
+    <script src="/deplacement-covid-19/certificate.bed43037.js"></script>
 </body>
 </html>
