@@ -52878,7 +52878,7 @@ Object.keys(conditions).forEach(function (field) {
 });
 
 function addVersion() {
-  document.getElementById('version').innerHTML = "".concat(new Date().getFullYear(), " - ").concat("42.42.42");
+  document.getElementById('version').innerHTML = "".concat(new Date().getFullYear(), " - ").concat("localversion");
 }
 
 addVersion();
@@ -52910,7 +52910,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33913" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46597" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

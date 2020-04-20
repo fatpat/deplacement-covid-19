@@ -65,7 +65,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "4d2f847e84bd763afbd045ea148a447d"
+    "revision": "4e546955e34d5732e0a96d96a72a6880"
   },
   {
     "url": "marianne-bold-webfont.db730b38.woff",
@@ -89,7 +89,7 @@ self.__precacheManifest = [
   },
   {
     "url": "./",
-    "revision": "6a92efd3b82f870ba8ee9394bc566612"
+    "revision": "a08a71ec4bddc18837b14bb44a55961d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
